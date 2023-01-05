@@ -11,6 +11,7 @@ case class Event (
                    soldTickets: Int,
                    exchangedTickets: Int
                  )
+// Ticket is initialised as "not sold"
 case class Ticket(eventId: Long, id: Long, eventTicketNumber: Int, sold: String = "Not sold")
 
 
