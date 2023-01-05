@@ -19,7 +19,7 @@ object SlickTables {
   import slick.jdbc.PostgresProfile.api._
 
   // Define Tables using Slick's API
-  class EventTable(tag: Tag) extends Table[Event](tag, Some("events"), "Events") {
+  class EventTable(tag: Tag) extends Table[Event](tag, Some("event_system"), "Events") {
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc, O.Unique)
     def name = column[String]("event_name")
     def startDate = column[LocalDate]("start_date")
@@ -31,7 +31,7 @@ object SlickTables {
     override def * =  (id, name, startDate, endDate, availableTickets, soldTickets, exchangedTickets) <> (Event.tupled, Event.unapply)
   }
 
-  class TicketTable(tag: Tag) extends Table[Ticket](tag, Some("tickets"), "Tickets") {
+  class TicketTable(tag: Tag) extends Table[Ticket](tag, Some("event_system"), "Tickets") {
     def eventId = column[Long]("event_id")
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
     def eventTicketNumber = column[Int]("event_ticket_number")
