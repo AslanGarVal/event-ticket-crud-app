@@ -1,0 +1,3 @@
+CREATE EXTENSION hstore;
+CREATE SCHEMA event_system;
+CREATE TABLE IF NOT EXISTS event_system."Events" ("id" BIGSERIAL NOT NULL PRIMARY KEY );
