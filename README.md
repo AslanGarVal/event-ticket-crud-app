@@ -51,5 +51,8 @@ in the directory ```db/init-scripts.sql```.
 
 ```docker exec -it pruebatecnica_db_1 psql -U postgres```
 
-to access the Docker instance and run a querying engine against the database. 
+to access the Docker instance and run a querying SQL engine against the database. 
 
+
+The Scala project can be compiled via sbt and the resulting jar file can be run with the Main module as main class. 
+Alternatively, if using IntelliJ, the Main module can be executed from the IDE without compiling into a jar file. 
