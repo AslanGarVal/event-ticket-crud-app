@@ -27,3 +27,8 @@ In both classes, methods are defined to map each field of the respective case cl
 The '*' method is overridden to define the mapping of a whole case class to a row of its corresponding table. 
 
 ### DatabaseConnection
+The DatabaseConnection object simply contains the Database instance that is generated from reading the application.conf file provided which includes all the
+connection info required to communicate with the external Postgres database.
+
+### Main
+The Main module contains the main methods for writing and reading case classes and table rows. 
