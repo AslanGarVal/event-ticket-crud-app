@@ -32,3 +32,18 @@ connection info required to communicate with the external Postgres database.
 
 ### Main
 The Main module contains the main methods for writing and reading case classes and table rows. 
+Events are allowed to be created into the database table, read from the database table, deleted or updated into the database table; data to be 
+created/updated/deleted is validated before doing so and an exception is thrown when not validated. 
+
+Ticket buying and redemption is achieved through the insert and update methods for the Ticket case class.
+
+The main method of this module shows a quick demonstration of the above implemented methods.
+
+## Testing
+
+The database against which the system is run is deployed by a Postgres image of a docker container. 
+To run the database, place yourself on this repo's main directory and use the following commands: 
+
+```docker-compose -up```
+
+
