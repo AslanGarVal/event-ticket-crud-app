@@ -41,9 +41,15 @@ The main method of this module shows a quick demonstration of the above implemen
 
 ## Testing
 
-The database against which the system is run is deployed by a Postgres image of a docker container. 
+The database against which the system is run is deployed by a Postgres image of a Docker container. 
 To run the database, place yourself on this repo's main directory and use the following commands: 
 
-```docker-compose -up```
+```docker-compose up```
 
+to initialise the database, the schema, and the empty tables to be used; and to fire up the Docker instance. The definition of the schema and tables is found 
+in the directory ```db/init-scripts.sql```.
+
+```docker exec -it pruebatecnica_db_1 psql -U postgres```
+
+to access the Docker instance and run a querying engine against the database. 
 
