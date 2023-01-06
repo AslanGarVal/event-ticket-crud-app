@@ -56,3 +56,4 @@ to access the Docker instance and run a querying SQL engine against the database
 
 The Scala project can be compiled via sbt and the resulting jar file can be run with the Main module as main class. 
 Alternatively, if using IntelliJ, the Main module can be executed from the IDE without compiling into a jar file. 
+The main method can be modified to introduce as many testing scenarios as desired.
